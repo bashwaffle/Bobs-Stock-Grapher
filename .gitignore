@@ -261,4 +261,4 @@ __pycache__/
 *.pyc
 
 # Config.ini file where API key stored
-__config__.ini'
+__config__.ini
