@@ -6,7 +6,9 @@ import pandas as pd
 import numpy as np
 import urllib, json
 import matplotlib.pyplot as plt
+import os
 
+ticker = 'msft' 
 
 #these are the API parameters from https://www.alphavantage.co/documentation/
 
