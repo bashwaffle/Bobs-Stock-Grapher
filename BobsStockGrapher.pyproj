@@ -22,12 +22,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BobsStockGrapher.py" />
+    <Compile Include="keys\keys.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="keys\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="README.md" />
-    <Content Include="__config__.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="C:\Users\bobti\Desktop\BobsStockGrapher\Bobs-Stock-Grapher\keys\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

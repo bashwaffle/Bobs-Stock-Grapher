@@ -8,7 +8,6 @@ import urllib, json
 import matplotlib.pyplot as plt
 import os
 
-
 ticker = 'msft' 
 
 #these are the API parameters from https://www.alphavantage.co/documentation/
@@ -19,7 +18,7 @@ stock_symbol= '&symbol={}'.format(ticker)
 outputsize= '&outputsize=full'
 api_datatype= '&datatype=csv'
 api_time_interval= '&interval=60min'
-alpha_apikey= '&apikey={}'.format(API_key)
+alpha_apikey= '&apikey={}'.format(os.environ["Key"])
 
 #Concatenate the API request
 request1 = alpha_url + time_series_function + stock_symbol + api_datatype + outputsize + alpha_apikey
