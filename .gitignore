@@ -265,3 +265,5 @@ __config__.ini
 config.py
 keys.py
 
+# Ignore visual studio solution files
+*.sln
