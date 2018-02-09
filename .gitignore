@@ -262,3 +262,5 @@ __pycache__/
 
 # Config.ini file where API key stored
 __config__.ini
+config.py
+
