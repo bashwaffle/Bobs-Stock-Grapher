@@ -21,7 +21,7 @@ stock_symbol= '&symbol={}'.format(ticker)
 outputsize= '&outputsize=full'
 api_datatype= '&datatype=csv'
 api_time_interval= '&interval=60min'
-alpha_apikey= '&apikey={}'.format(input("Enter your API Key Here"))
+alpha_apikey= '&apikey={}'.format(input("Enter your API Key Here: "))
 
 #Will need to turn this into a function for populating DB
 #Concatenate the API request
@@ -34,11 +34,6 @@ print(url_to_df)
 
 #Add a datetime column
 url_to_df['datetime'] = pd.to_datetime(url_to_df['timestamp'])
-
-#Add all rows to a database column
-
-#Create a database update function
-
 
 #plot closing price by day
 plt.plot(url_to_df['datetime'], url_to_df['close'])

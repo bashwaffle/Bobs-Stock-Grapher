@@ -21,13 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="API_Pull_Func\API_Pull.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API_Pull_Func\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="BobsStockGrapher.py" />
-    <Compile Include="keys\keys.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="keys\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -38,7 +38,7 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="C:\Users\bobti\Desktop\BobsStockGrapher\Bobs-Stock-Grapher\keys\" />
+    <Folder Include="API_Pull_Func\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
