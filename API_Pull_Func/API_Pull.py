@@ -38,7 +38,8 @@ def API_pull(ticker, interval='60min'):
 
     #Add a datetime column
     url_to_df['datetime'] = pd.to_datetime(url_to_df['timestamp'])
-    print(url_to_df.head())
+    url_to_df = pd.DataFrame(url_to_df)
+    return url_to_df
 
 # Run API_pull function over a list of stocks
 
@@ -54,10 +55,11 @@ conn = db.connect(DB_path)
 for stock in stocks:
     
     #Store API_pull data as a dataframe
-    DF = API_pull(ticker=stock)
-    
-    #Add dataframe to SQL database
-    DF.io.sql.to_sql(name=stock, con=conn, if_exists='fail')
+    API_pull_df = API_pull(ticker=stock)
 
+    #Add dataframe to SQL database
+    pd.io.sql.to_sql(frame=API_pull_df, name=stock, con=conn, if_exists='fail')
+
+conn.close()
 
 
